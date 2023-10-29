@@ -10,7 +10,7 @@ import unionFind.WUPercolation;
 public class Main {
 
     public static void main(String[] args) {
-        int schemaSize = 10;
+        int schemaSize = 100;
         int schemaQuantity = 100; // For each vacancyP from 0.000 to 1 (1000 times)
         testSchemas(schemaQuantity, schemaSize, new QFPercolation(), "Quick Find");
         testSchemas(schemaQuantity, schemaSize, new QUPercolation(), "Quick Union");
