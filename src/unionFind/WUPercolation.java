@@ -13,12 +13,14 @@ public class WUPercolation extends AUFPercolation implements IUnionFind {
         System.out.println("\nPercolates : " + qF.percolates());
     }
 
+
     /*
      This solution use the Weight Union method.
      */
 
     // **** FIELDS *****
     private int[] sizes; // keep track of the size of each tree
+
 
     // ***** CONSTRUCTOR *****
     public WUPercolation() {
@@ -27,14 +29,12 @@ public class WUPercolation extends AUFPercolation implements IUnionFind {
     }
 
 
-
     // ***** METHODS *****
-
 
     @Override
     public void processSchema(Schema schema, boolean singleUseSchema) {
-        this.sizes = new int[schema.getSiteQuantity() + 2];
         // Initialize all tree sizes to 1
+        this.sizes = new int[schema.getSiteQuantity() + 2];
         for (int i = 0; i < componentsQuantity; i++) sizes[i] = 1;
         super.processSchema(schema, singleUseSchema);
     }

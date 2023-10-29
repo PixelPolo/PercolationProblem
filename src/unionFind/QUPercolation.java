@@ -13,6 +13,7 @@ public class QUPercolation extends AUFPercolation implements IUnionFind {
         System.out.println("\nPercolates : " + qF.percolates());
     }
 
+
     /*
      This solution use the Quick Union method.
      */
