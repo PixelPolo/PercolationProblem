@@ -6,7 +6,7 @@ public class WUPercolation extends AUFPercolation implements IUnionFind {
 
     // Main for testing
     public static void main(String[] args) {
-        Schema s = new Schema(0.6, 3);
+        Schema s = new Schema(0.6, 5);
         System.out.println(s);
         QFPercolation qF = new QFPercolation();
         qF.processSchema(s, true);
@@ -18,18 +18,26 @@ public class WUPercolation extends AUFPercolation implements IUnionFind {
      */
 
     // **** FIELDS *****
-    private final int[] sizes; // keep track of the size of each tree
+    private int[] sizes; // keep track of the size of each tree
 
     // ***** CONSTRUCTOR *****
     public WUPercolation() {
         super();
-        this.sizes = new int[componentsQuantity];
-        // Initialize all tree sizes to 1
-        for (int i = 0; i < componentsQuantity; i++) sizes[i] = 1;
+
     }
 
 
+
     // ***** METHODS *****
+
+
+    @Override
+    public void processSchema(Schema schema, boolean singleUseSchema) {
+        this.sizes = new int[schema.getSiteQuantity() + 2];
+        // Initialize all tree sizes to 1
+        for (int i = 0; i < componentsQuantity; i++) sizes[i] = 1;
+        super.processSchema(schema, singleUseSchema);
+    }
 
     @Override
     public int find(int p) {
