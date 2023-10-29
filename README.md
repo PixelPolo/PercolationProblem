@@ -14,3 +14,6 @@ Time to process 1000 schemas of size 1'000 x 1'000 :
 - Quick Find :     not tested...
 - Quick Union :    193 seconds
 - Weight Union :    68 seconds
+
+
+![Quick Find results](https://github.com/PixelPolo/PercolationProblem/blob/master/src/results/Quick%20Find%20Results.png)
