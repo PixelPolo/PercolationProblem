@@ -6,7 +6,7 @@ Algorithms, 4th Edition by Robert Sedgewick and Kevin Wayne, Percolation Problem
 Time to process 100'000 schemas of size 100 x 100 :
 
 - Quick Find :     859 seconds ~ 14 minutes
-- Quick Union :     62 seconds
+- Quick Union :     61 seconds
 - Weight Union :    50 seconds
 
 
